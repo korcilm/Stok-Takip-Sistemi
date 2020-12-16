@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dgwProduct = new System.Windows.Forms.DataGridView();
             this.gbxCategory = new System.Windows.Forms.GroupBox();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
@@ -60,6 +61,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.AddProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxCategory.SuspendLayout();
             this.gbxProduct.SuspendLayout();
@@ -83,9 +85,9 @@
             // 
             this.gbxCategory.Controls.Add(this.cbxCategory);
             this.gbxCategory.Controls.Add(this.lblCategory);
-            this.gbxCategory.Location = new System.Drawing.Point(12, 33);
+            this.gbxCategory.Location = new System.Drawing.Point(493, 42);
             this.gbxCategory.Name = "gbxCategory";
-            this.gbxCategory.Size = new System.Drawing.Size(1265, 78);
+            this.gbxCategory.Size = new System.Drawing.Size(396, 78);
             this.gbxCategory.TabIndex = 1;
             this.gbxCategory.TabStop = false;
             this.gbxCategory.Text = "Katergoriye göre ara";
@@ -112,9 +114,9 @@
             // 
             this.gbxProduct.Controls.Add(this.tbxProduct);
             this.gbxProduct.Controls.Add(this.lblProduct);
-            this.gbxProduct.Location = new System.Drawing.Point(12, 127);
+            this.gbxProduct.Location = new System.Drawing.Point(12, 42);
             this.gbxProduct.Name = "gbxProduct";
-            this.gbxProduct.Size = new System.Drawing.Size(1265, 78);
+            this.gbxProduct.Size = new System.Drawing.Size(396, 78);
             this.gbxProduct.TabIndex = 2;
             this.gbxProduct.TabStop = false;
             this.gbxProduct.Text = "Ürün adına göre ara";
@@ -149,12 +151,13 @@
             this.gbxAdd.Controls.Add(this.lblUnitPrice);
             this.gbxAdd.Controls.Add(this.lblCategoryId);
             this.gbxAdd.Controls.Add(this.lblProductName2);
-            this.gbxAdd.Location = new System.Drawing.Point(12, 532);
+            this.gbxAdd.Location = new System.Drawing.Point(12, 512);
             this.gbxAdd.Name = "gbxAdd";
-            this.gbxAdd.Size = new System.Drawing.Size(601, 242);
+            this.gbxAdd.Size = new System.Drawing.Size(594, 262);
             this.gbxAdd.TabIndex = 3;
             this.gbxAdd.TabStop = false;
             this.gbxAdd.Text = "Yeni ürün ekle";
+            this.gbxAdd.Enter += new System.EventHandler(this.gbxAdd_Enter);
             // 
             // btnAdd
             // 
@@ -260,7 +263,7 @@
             this.gbxUpdate.Controls.Add(this.label3);
             this.gbxUpdate.Controls.Add(this.label4);
             this.gbxUpdate.Controls.Add(this.label5);
-            this.gbxUpdate.Location = new System.Drawing.Point(676, 532);
+            this.gbxUpdate.Location = new System.Drawing.Point(663, 517);
             this.gbxUpdate.Name = "gbxUpdate";
             this.gbxUpdate.Size = new System.Drawing.Size(601, 242);
             this.gbxUpdate.TabIndex = 4;
@@ -360,7 +363,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(1159, 489);
+            this.btnDelete.Location = new System.Drawing.Point(1159, 474);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(118, 37);
             this.btnDelete.TabIndex = 5;
@@ -368,11 +371,22 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // AddProduct
+            // 
+            this.AddProduct.Image = ((System.Drawing.Image)(resources.GetObject("AddProduct.Image")));
+            this.AddProduct.Location = new System.Drawing.Point(12, 126);
+            this.AddProduct.Name = "AddProduct";
+            this.AddProduct.Size = new System.Drawing.Size(76, 68);
+            this.AddProduct.TabIndex = 7;
+            this.AddProduct.UseVisualStyleBackColor = true;
+            this.AddProduct.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1291, 786);
+            this.Controls.Add(this.AddProduct);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
@@ -429,6 +443,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button AddProduct;
     }
 }
 

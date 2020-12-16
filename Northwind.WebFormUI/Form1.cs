@@ -136,5 +136,16 @@ namespace Northwind.WebFormUI
             }
             LoadProducts();
         }
+        //Ürün ekleme sayfasını çalıştıran buton
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();        
+        }
+
+        private void gbxAdd_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
